@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="sourse/styles/mystil.css">
+    <link rel="stylesheet" href="sourse/styles/style1.css"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="sourse/files/kjuj/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="sourse/files/kjuj/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="sourse/files/kjuj/favicon-16x16.png">
+    <link rel="manifest" href="sourse/files/kjuj/site.webmanifest"> 
+    
+    <title>Magic bouquet</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="sourse/files/gfdds.jpg" alt="..."></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-items">
+                            <a class="nav-link active" aria-current="page"  href="#" style="width: 200px; margin-right: 50px;">Magic bouquet</a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Букеты</a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            <a class="nav-link" href="shariki.html">Шары</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comm.html">Отзывы</a>
+                        </li><div class="button" style="margin-inline: 1 em; margin: 10px; width: 150px ">
+                            <p href="#" id="open_pop_up">Оформить заказ</p>  
+                        <div class="pop_up" id="pop_up">
+                            <div class="pop_up_conteiner">
+                                <div class="pop_up_body" id="open_pop_up">
+                                    <p>Оформить заказ</p>
+                                    <form action="mail.php" method="POST">
+                                        <input name="fio" type="text" placeholder="Фамилия Имя" required>
+                                        <div class="select">
+                                            <select name="format" id="format">
+                                                <option selected disabled>Выберете товар</option>
+                                                <option value="Buket">Букет</option>
+                                                <option value="Svetok">Цветок</option>
+                                                <option value="Shar">Шар</option>
+                                            </select>
+                                        </div>
+                                        <input name="Nazvanie" type="text" placeholder="Название" required>
+                                        <input name="Adres" type="text" placeholder="Адрес доставки" required>
+                                        <input name="Date" type="date">   
+                                        <input name="Email" type="text" placeholder="Email" required> 
+                                                    
+                                        <button  class="ready"  type="buttono" name="buttono">Заказать </button>                            
+                                        <canvas id="canvas"></canvas>            
+                                        <div class="pop_up_close" id="open_pop_close">&#10006</div>
+                                    </form>
+                                </div>
+                            </div>
+                            </div>
+                        </div>  
+                        <ul class="social-icons-6">
+                            <li><a href="https://vk.com/id250241010"><i class="fa fa-vk"></i></a></li>
+                            <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        </ul> 
+                       <div class="header_cart" tabindex="0">
+                       </div>
+                                          
+                    </ul>                                   
+                </div>
+            </div>        
+        </nav>
+    </header>
+    <section>
+        <div class="conteinerfl mt-1">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-10 ">
+                   <div class="row">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="d-block w-100">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <img src="sourse/img/нак.jpg" class="w-100" alt="">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 slaid">
+                                        <p > «Magic bouquet» <br> <br> Компания начала свою работу в 2010 году. Сегодня мы доставляем более 50 букетов ежедневно. За всю нашу деятельность мы сделали чуточку счастливее более 100.000 человек. <br> <br>Наша миссия — сделать покупку цветов простой и приятной,для того, что бы дарить улыбки и радость получателю и заказчику. <br> <br>За весь наш многолетний опыт — наша компания научилась давать больше чем цветы, наши курьеры и менеджеры дарят  позитивное настроение и чувство высокой удовлетворенности после пользования услугами нашего сервиса.</p>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                           <div class="d-block w-100">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <img src="sourse/img/на.jpg"" class="w-100" alt="">
+                                </div>
+                                <div class="col-lg-6 col-md-6 slaid">
+                                    <p>ОФОРМЕЛНИЕ ЗАКАЗА  <br><br>Оформить заказ мы можете: <br> * по телефону +7 (992) 234-10-31<br>* на нешем сайте<br>*в нашем салоне по адресу г.Пермь, ул.Светлая, 23 <br></p>
+                                    <p>СПОСОБЫ ОПЛАТЫ <br><br>Выберети удобный для вас способ оплаты: <br> * наличный расчёт (при получении букета курьеру)<br>* безналичный расчёт: оплату можно совершить переводом по номеру карты: <br>* Сбербанк 2916 8908 3650 1533 <br>* Тинькофф 5036 4439 1929 3227</p>
+                                </div>
+                            </div>
+                           </div>
+                          </div>
+                          
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                   </div>
+                   
+                   <div class="col-li-12 col-md-12 text-center mt-4">   
+                    <button type="button" class="btn btn-outline-primary">+7 992 306 61 09</button>
+               </div>
+                   <div class="col-li-12 col-md-12 text-center mt-1">   
+                        <p>Могу ли я вам помочь?</p>
+                   </div>
+                   <div class="col-li-12 col-md-12 text-center">   
+                    <img class="coll-animat" style="width: 40px;" src="sourse/files/ntkt.png" alt="">
+               </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="mt-4">
+        <div class="conteinerfluid">
+            <div class="row">
+                <div class="col-lg-4  footertext text-center">
+                    <p> Номера телефонов: <br>+7 (992) 234-10-31 <br> +7 (921) 200-21-98</p>
+                </div>
+                <div class="col-lg-4  footertext text-center">
+                    <p> Наш адрес:<br> г.Пермь, ул.Светлая, 23</p>
+                </div>
+                <div class="col-lg-4  footertext text-center">
+                    <p> Расписание: <br> Пн-Пт 11:00-21:30 <br>Субб-Вс 14:00-16:00 </p>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    <script src="more.js"></script>
+    <script src="main.js"></script>
+    <script src="heart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+ 
+</body>
+
+</html>

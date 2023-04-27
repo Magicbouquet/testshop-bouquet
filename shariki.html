@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="sourse/styles/mystil.css">
+    <link rel="stylesheet" href="sourse/styles/style1.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="sourse/files/kjuj/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="sourse/files/kjuj/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="sourse/files/kjuj/favicon-16x16.png">
+    <link rel="manifest" href="sourse/files/kjuj/site.webmanifest">
+    <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css"> 
+    
+    <script src="https://kit.fontawesome.com/bfec730d56.js" crossorigin="anonymous"></script>
+    <title>Magic bouquet</title>
+    <style>
+        .scale {
+         transition: 3s; 
+        }
+        .scale:hover {
+         transform: scale(0.9); 
+        }
+       </style>
+</head>
+<body> 
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="sourse/files/gfdds.jpg" alt="..."></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-items">
+                            <a class="nav-link active" aria-current="page"  href="#" style="width: 200px; margin: 1px;">Magic bouquet</a>
+                        </li>  
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Букеты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shariki.html">Шары</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comm.html">Отзывы</a>
+                        </li>
+                       
+                        <div class="header_cart" tabindex="0">
+                        </div>
+                         <div class="button" style="margin-inline: 1 em; margin: 10px; width: 150px ">
+                             <p href="#" id="open_pop_up">Оформить заказ</p>  
+                         <div class="pop_up" id="pop_up">
+                             <div class="pop_up_conteiner">
+                                 <div class="pop_up_body" id="open_pop_up">
+                                     <p>Оформить заказ</p>
+                                     <form action="mail.php" method="POST">
+                                         <input name="fio" type="text" placeholder="Фамилия Имя" required>
+                                         <div class="select">
+                                             <select name="format" id="format">
+                                                 <option selected disabled>Выберете товар</option>
+                                                 <option value="Buket">Букет</option>
+                                                 <option value="Svetok">Цветок</option>
+                                                 <option value="Shar">Шар</option>
+                                             </select>
+                                         </div>
+                                         <input name="Nazvanie" type="text" placeholder="Название" required>
+                                         <input name="Adres" type="text" placeholder="Адрес доставки" required>
+                                         <input name="Date" type="date">   
+                                         <input name="Email" type="text" placeholder="Email" required> 
+                                                     
+                                         <button  class="ready"  type="buttono" name="buttono">Заказать </button>                            
+                                         <canvas id="canvas"></canvas>            
+                                         <div class="pop_up_close" id="open_pop_close">&#10006</div>
+                                     </form>
+                                 </div>
+                             </div>
+                             </div>
+                         </div>  
+                        
+                        <ul class="social-icons-6">
+                            <li><a href="https://vk.com/id250241010"><i class="fa fa-vk"></i></a></li>
+                            <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        </ul>             
+                    </ul>                                   
+                </div>
+            </div>        
+        </nav>
+     </header>    
+     <section>
+        <div class="conteinerfl mt-1">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-8 col-md-12">
+                    <div class="row">
+                        
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 27rem;">
+                                <img src="sourse/img/шарик25.jpg" class="scale" class="card-img-top" alt="...">
+                                   
+                                <div class="card-body">
+                                    <h5  class="card-title">Шары "Мы тебя очень ждали"</h5>
+                                    <p class="card-text">200 рублей</p>     
+                                    <button onclick="Toggle41()" id="btnh41" class="btn"><i class="fas fa-heart"></i></button>                             
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 27rem;">
+                                <img src="sourse/img/шарик21.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Черно-серые шары</h5>
+                                    <p class="card-text">350 рублей</p>
+                                    <button onclick="Toggle42()" id="btnh42" class="btn"><i class="fas fa-heart"></i></button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 27rem;">
+                                <img src="sourse/img/шарик29.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "Мой защитник"</h5>
+                                    <p class="card-text">150 рублей</p>
+                                    <button onclick="Toggle43()" id="btnh43" class="btn"><i class="fas fa-heart"></i></button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 29rem;">
+                                <img src="sourse/img/шарик5.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "С днем рождения, Любимая"</h5>
+                                    <p class="card-text">300 рублей</p>
+                                    <button onclick="Toggle44()" id="btnh44" class="btn"><i class="fas fa-heart"></i></button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 29rem;">
+                                <img src="sourse/img/шарик11.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "Queen or my hard"</h5>
+                                    <p class="card-text">200 рублей</p>
+                                    <button onclick="Toggle45()" id="btnh45" class="btn"><i class="fas fa-heart"></i></button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 29rem;">
+                                <img src="sourse/img/шарик7.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "С нем рождения, Мамочка"</h5>
+                                    <p class="card-text">190 рублей</p>
+                                    <button onclick="Toggle46()" id="btnh46" class="btn"><i class="fas fa-heart"></i></button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4 ">
+                            <div class="card" style="width: 18rem; height: 28rem;">
+                                <img src="sourse/img/шарик8.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"> Шары "Люблю тебя до 23 февраля"</h5>
+                                    <p class="card-text">200 рублей</p>
+                                    <button onclick="Toggle47()" id="btnh47" class="btn"><i class="fas fa-heart"></i></button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4 ">
+                            <div class="card" style="width: 18rem; height:28rem;">
+                                <img src="sourse/img/шарик10.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "Бабуля, спасибо за то, что ты есть"</h5>
+                                    <p class="card-text">250 рублей</p>
+                                    <button onclick="Toggle48()" id="btnh48" class="btn"><i class="fas fa-heart"></i></button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4 ">
+                            <div class="card" style="width: 18rem; height: 28rem;">
+                                <img src="sourse/img/шарик6.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "Happi dirti trirty"</h5>
+                                    <p class="card-text">150 рублей</p>
+                                    <button onclick="Toggle49()" id="btnh49" class="btn"><i class="fas fa-heart"></i></button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4 ">
+                            <div class="card" style="width: 18rem; height: 27rem;">
+                                <img src="sourse/img/шарик12.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "Аришка, С днем рождения"</h5>
+                                    <p class="card-text">230 рублей</p>
+                                    <button onclick="Toggle50()" id="btnh50" class="btn"><i class="fas fa-heart"></i></button> 
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 27rem;">
+                                <img src="sourse/img/шарик20.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "Happe birthday Roma"</h5>
+                                    <p class="card-text">260 рублей</p>
+                                    <button onclick="Toggle51()" id="btnh51" class="btn"><i class="fas fa-heart"></i></button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 27rem;">
+                                <img src="sourse/img/шарики33.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары прозрачные</h5>
+                                    <p class="card-text">310 рублей</p>
+                                    <button onclick="Toggle52()" id="btnh52" class="btn"><i class="fas fa-heart"></i></button> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 27rem;">
+                                <img src="sourse/img/шарик16.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "Big"</h5>
+                                    <p class="card-text">250 рублей</p>
+                                    <button onclick="Toggle53()" id="btnh53" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 27rem;">
+                                <img src="sourse/img/шарик38.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Серебристо-синие шары</h5>
+                                    <p class="card-text">300 рублей</p>
+                                    <button onclick="Toggle54()" id="btnh54" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 27rem;">
+                                <img src="sourse/img/шарик19.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "С днем рождения, доченька"</h5>
+                                    <p class="card-text">260 рублей</p>
+                                    <button onclick="Toggle55()" id="btnh55" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 23rem;">
+                                <img src="sourse/img/шарик14.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "Happy birthday Mom"</h5>
+                                    <p class="card-text">250 рублей</p>
+                                    <button onclick="Toggle56()" id="btnh56" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 23rem;">
+                                <img src="sourse/img/шарик4.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "Happy birthday"</h5>
+                                    <p class="card-text">250 рублей</p>
+                                    <button onclick="Toggle57()" id="btnh57" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 23rem;">
+                                <img src="sourse/img/шарик22.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "Happн birthday to you"</h5>
+                                    <p class="card-text">190 рублей</p>
+                                    <button onclick="Toggle58()" id="btnh58" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 29rem;">
+                                <img src="sourse/img/новыешары3.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары  "C днем рождения"</h5>
+                                    <p class="card-text">390 рублей</p>
+                                    <button onclick="Toggle60()" id="btnh60" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 29rem;">
+                                <img src="sourse/img/новыешары2.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Серебристо-черные шары</h5>
+                                    <p class="card-text">200 рублей</p>
+                                    <button onclick="Toggle61()" id="btnh61" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-4 col-md-6 mt-4 ">
+                            <div class="card" style="width: 18rem;height: 29rem; ">
+                                <img src="sourse/img/шарик1.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары "Любимуму мужу 35"</h5>
+                                    <p class="card-text">390 рублей</p>
+                                    <button onclick="Toggle68()" id="btnh68" class="btn"><i class="fas fa-heart"></i></button>                                 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 29rem;">
+                                <img src="sourse/img/шарик31.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Шары черные "Happн birthday"</h5>
+                                    <p class="card-text">390 рублей</p>
+                                    <button onclick="Toggle63()" id="btnh63" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 29rem;">
+                                <img src="sourse/img/шарик17.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Серебристо-черные шары</h5>
+                                    <p class="card-text">200 рублей</p>
+                                    <button onclick="Toggle64()" id="btnh64" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 29rem;">
+                                <img src="sourse/img/шарик39.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Серебристо-розовые шары</h5>
+                                    <p class="card-text">200 рублей</p>
+                                    <button onclick="Toggle65()" id="btnh65" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12">                   
+                    <div class="row px-2">
+                        <div class="col-lg-12 saait my-4">
+                            <p>Сегодня с тюльпанами нет никаких проблем. Их можно легко приобрести в любом цветочном магазине. Это же касается и луковиц тюльпана. Однако ранее, в 17-м веке, луковицы тюльпана были настолько ценными в Голландии, что ценились выше золота. В 1634-1637 годах, в Западной Европе, произошло настоящее тюльпанное безумие. Луковицы были настолько дорогими, что их считали валютой.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p> Самым медленно цветущим цветком на нашей планете является редкий вид гигантской бромелиии Puya raimondii (Пуйя Раймонда). Он был обнаружен на высоте 3960 метров над уровнем моря в боливийских горах в 1870-м году.
+
+                                Цвести Пуйя Раймонда начинает приблизительно на 80-150 году своей жизни. Как только Пуйя Раймонда расцветет, она погибнет.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>В свое время самой дорогой розой в мире считалась роза Джульетта, созданная знаменитым английским селекционером Дэвидом Остином. На создание этой удивительной розы он потратил целых 15 лет и сумму более 3 миллионов евро. Презентовал свою розу он на выставке в Англии в 2006 году.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Цветы всегда были символами. Например, лилии ассоциируются с жизнью и чистотой, особенно у буддистских монахов. Красные розы олицетворяют любовь, красоту, страсть. В Европе маки носят 8-9 мая, в Дни памяти и примирения (у нас День Победы), в честь тех, кто погиб во время Второй мировой войны. Ромашки всегда ассоциируются с детьми.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Пыльца любого вида растений отличается от других строением наружной оболочки. Эта оболочка очень прочна, ее не могут разрушить ни кислоты, ни щелочи. Она выдерживает высокие давления и миллионами лет сохраняет свою форму и характерные признаки, что помогает определить ученым, какому растению принадлежит пыльца и когда оно росло.
+
+                                Но своему составу пыльца очень богата питательными веществами. К примеру, у кукурузы в пыльце содержится 43 процента крахмала, 40 процентов аминокислот и нуклеиновых кислот, 2 процента жиров. Не случайно цветочную пыльцу так любят насекомые и тропические птицы-опылители.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Из цветков дельфиниума в средние века врачи делали примочки при переломах. Считалось, что это помогает сращиванию костей. В те времена также существовало мнение, что синий цвет дельфиниума успокаивает уставшие глаза, поэтому его цветками украшали стены помещения, где женщины вышивали за пяльцами.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Свадебным букетом в Англии считается букет из незабудок или анютиных глазок. В Европе молодоженам дарят однотонные букеты или букеты из семи цветов. В Египте принято преподносить жениху и невесте целую корзину цветов.
+
+                                Выбирая цветы, нужно учитывать, что розы лучше дарить в бутонах, готовых раскрыться. Амариллисы и орхидеи дарят поштучно; орхидею каттлея преподносят в готовой подарочной упаковке. Герберу в букете дополняют зеленью, так как она срезается без листьев.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>В Японии ценят плодовые деревья в первую очередь за их цветки, а не за плоды. Большая часть цветов, любимых японцами, не имеют аромата, поэтому ими любуются, а не наслаждаются их запахом.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Национальными цветками Коста-Рики и Венесуэлы считаются все виды орхидеи катлеи, а национальным цветком Гватемалы является орхидея ликаста.
+
+                                Среди цветов в каждой стране есть свои любимцы, некоторые вошли в гербы этих стран. В Нидерландах - тюльпан. В Японии - хризантема. В Ирландии - клевер. В Мексике - георгин. В гербе Уэльса - лук-порей. 
+                                
+                                В Ирландии легко было различать дома католиков и протестантов, так как католики сажали у дома белые цветы, а протестанты - оранжевые.
+                                
+                                В США каждый штат страны имеет свой цветок-символ: Индиана - пион, Огайо - красная гвоздика, Колорадо - водосбор, Аляска - незабудка, Канзас - подсолнечник, Техас - синий люпин, Калифорния - эшшольция.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Ясенец белый или Dictamnus, горящий куст, возможно, тот самый куст из Библии, в котором Бог предстал перед Моисеем. И в нем нет мистики. Цветы ясенца содержат много горючих веществ, которые в безветренный день образуют вокруг куста небольшое облако. Если к нему поднести огонь, появится пламя. Конечно, мы не утверждаем, что именно ясенец видел Моисей, лишь высказали предположение.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Агава — растение, которое растет на протяжении десятилетий, а иногда и 100 лет, чтобы зацвести лишь раз и через несколько месяцев погибнуть. Во время роста она набирает питательные вещества, затем выбрасывает цветонос, напоминающий гигантскую метелку, размером до 10 м. Он состоит из десятков тысяч миниатюрных цветочков, из которых образуются семена. Нелегкая судьба у агавы: всю жизнь копить силы, чтобы блеснуть и засохнуть.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p></p>
+                        </div>
+                       
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/main.js"></script>
+    </section>
+   
+    <footer class="mt-4">
+        <div class="conteinerfluid">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 footertext text-center">
+                    <p> Номера телефонов: <br>+7 (992) 234-10-31 <br> +7 (921) 200-21-98</p>
+                </div>
+                <div class="col-lg-4 col-md-12 footertext text-center">
+                    <p> Наш адрес:<br> г.Пермь, ул.Светлая, 23</p>
+                </div>
+                <div class="col-lg-4 col-md-12 footertext text-center">
+                    <p> Расписание: <br> Пн-Пт 11:00-21:30 <br>Субб-Вс 14:00-16:00 </p>
+                </div>
+            </div>           
+        </div>
+    </footer>
+    <div class="go-top">
+        <img style="width: 50px; margin-inline: 2 em; margin: 5px;" src="sourse/files/toptop.png" alt="">
+    </div>
+    <script src="more.js"></script>
+    <script src="main.js"></script>
+    <script src="heart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

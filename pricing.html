@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="sourse/styles/mystil.css">
+    <link rel="stylesheet" href="sourse/styles/style1.css">
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="sourse/files/kjuj/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="sourse/files/kjuj/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="sourse/files/kjuj/favicon-16x16.png">
+    <link rel="manifest" href="sourse/files/kjuj/site.webmanifest">
+   
+    <script src="https://kit.fontawesome.com/bfec730d56.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f6dcf461c1.js" crossorigin="anonymous"></script>
+    <title>Magic bouquet</title>
+    <style>
+        .scale {
+         transition: 3s; 
+        }
+        .scale:hover {
+         transform: scale(0.9); 
+        }
+       </style>
+</head>
+
+<body> 
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="sourse/files/gfdds.jpg" alt="..."></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-items">
+                            <a class="nav-link active" aria-current="page"  href="#" style="width: 200px; margin-right: 50px;">Magic bouquet</a>
+                        </li>  
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">Букеты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shariki.html">Шары</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  href="comm.html">Отзывы</a>
+                        </li>   
+                       <div class="header_cart" tabindex="0">
+                       </div>
+                        <div class="button" style="margin-inline: 1 em; margin: 10px; width: 150px ">
+                            <p href="#" id="open_pop_up">Оформить заказ</p>  
+                        <div class="pop_up" id="pop_up">
+                            <div class="pop_up_conteiner">
+                                <div class="pop_up_body" id="open_pop_up">
+                                    <p>Оформить заказ</p>
+                                    <form action="mail.php" method="POST">
+                                        <input name="fio" type="text" placeholder="Фамилия Имя" required>
+                                        <div class="select">
+                                            <select name="format" id="format">
+                                                <option selected disabled>Выберете товар</option>
+                                                <option value="Buket">Букет</option>
+                                                <option value="Svetok">Цветок</option>
+                                                <option value="Shar">Шар</option>
+                                            </select>
+                                        </div>
+                                        <input name="Nazvanie" type="text" placeholder="Название" required>
+                                        <input name="Adres" type="text" placeholder="Адрес доставки" required>
+                                        <input name="Date" type="date">   
+                                        <input name="Email" type="text" placeholder="Email" required> 
+                                                    
+                                        <button  class="ready"  type="buttono" name="buttono">Заказать </button>                            
+                                        <canvas id="canvas"></canvas>            
+                                        <div class="pop_up_close" id="open_pop_close">&#10006</div>
+                                    </form>
+                                </div>
+                            </div>
+                            </div>
+                        </div>  
+                        <ul class="social-icons-6">
+                            <li><a href="https://vk.com/id250241010"><i class="fa fa-vk"></i></a></li>
+                            <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        </ul>         
+                    </ul>   
+                </div>
+            </div>        
+        </nav>
+     </header>    
+     <section>
+        <div class="conteinerfl mt-1">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-8 col-md-12">
+                    <div class="row">
+                        
+                        <div class="col-lg-4 col-md-6 mt-4 ">
+                            <div class="card" style="width: 18rem;height: 32rem;">
+                                <img class="scale" src="sourse/img/ddrrrr.jpg" class="scale" class="card-img-top" alt="..." >
+  
+                                <div class="card-body" >
+                                    
+                                    <h5 class="card-title">Нежные чувства</h5>
+                                    
+                                    <p>От 3 250 рублей <span id="dots">...</span><span id="more"> <br>Состав: гортензия, оформление <br> За шт 50 рублей</span></p>
+                                    <button  id="btn"  class="btno" onclick="readMore()">Подробнее</button> 
+                                    <button onclick="Toggle1()" id="btnh1" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/но9.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Цветочный вальс</h5>
+                                    <p>От 1 700 рублей<span id="dots1">...</span><span id="more1"><br>Состав: анемон, оформление<br>За шт 70 рублей</span></p>
+                                    <button class="btno" id="btn1" onclick="readMore1()">Подробнее</button> 
+                                    <button onclick="Toggle2()" id="btnh2" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/новые2.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Цветочный микрокосмос</h5>
+                                    <p>От 2 200 рублей<span id="dots2">...</span><span id="more2"><br> Состав: ранункулюс + оксипеталум<br>За шт 50 рублей</span></p>
+                                    <button class="btno" id="btn2" onclick="readMore2()">Подробнее</a> 
+                                    <button onclick="Toggle3()" id="btnh3" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/dbgf.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Реверанс</h5>
+                                    <p>От 1 500 рублей<span id="dots3">...</span><span id="more3"><br> Состав: дельфиниум, оформление<br>За шт 80 рублей</span></p>
+                                    <button class="btno" id="btn3" onclick="readMore3()">Подробнее</button> 
+                                    <button onclick="Toggle4()" id="btnh4" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/BbYLAaoT1IY.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Прекрасное начало</h5>
+                                    <p>От 2 500 рублей<span id="dots4">...</span><span id="more4"><br> Состав: гербера, оформление<br>За шт 50 рублей</span></p>
+                                    <button class="btno" id="btn4" onclick="readMore4()">Подробнее</a> 
+                                    <button onclick="Toggle5()" id="btnh5" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/новые3.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">ДНК Весны</h5>
+                                    <p>От 2 250 рублей<span id="dots5">...</span><span id="more5"><br> Состав: пион сара бернар + зелень, оформление<br>За шт 80 рублей</span></p>
+                                    <button class="btno" id="btn5" onclick="readMore5()">Подробнее</a> 
+                                    <button onclick="Toggle6()" id="btnh6" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/опа.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Теплое воспоминание</h5>
+                                    <p>От 3 500 рублей<span id="dots6">...</span><span id="more6"><br> Состав: анемон, оформление<br>За шт 70 рублей</span></p>
+                                    <button class="btno" id="btn6" onclick="readMore6()">Подробнее</a> 
+                                    <button onclick="Toggle7()" id="btnh7" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/Y8P5z7yvmDE.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Лесная нимфа</h5>
+                                    <p>От 2 500 рублей<span id="dots7">...</span><span id="more7"><br> Состав: дельфиниум, оформление<br>За шт 70 рублей</span></p>
+                                    <button class="btno" id="btn7" onclick="readMore7()">Подробнее</a> 
+                                    <button onclick="Toggle8()" id="btnh8" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4 ">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/микс.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Весеннее чувство </h5>
+                                    <p>От 3 000 рублей<span id="dots8">...</span><span id="more8"><br> Состав: пион 3 шт, оформление<br>За шт 70 рублей</span></p>
+                                    <button class="btno" id="btn8" onclick="readMore8()">Подробнее</a> 
+                                    <button onclick="Toggle9()" id="btnh9" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/новые5.jpg"  class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Парижский шик</h5>
+                                    <p>От 3 000 рублей<span id="dots9">...</span><span id="more9"><br> Состав: роза, оформление<br>За штуку 80 рублей</span></p>
+                                    <button class="btno" id="btn9" onclick="readMore9()">Подробнее</a> 
+                                    <button onclick="Toggle10()" id="btnh10" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/tykBSnSySe0.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Грация</h5>
+                                    <p>От 1 900 рублей<span id="dots10">...</span><span id="more10"><br> Состав: пуансеттия, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn10" onclick="readMore10()">Подробнее</a> 
+                                    <button onclick="Toggle11()" id="btnh11" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/uUxU6yp7SsQ.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Розовый ангел</h5>
+                                    <p>От 2 900 рублей<span id="dots11">...</span><span id="more11"><br> Состав: роза, оформление<br>За штуку 80 рублей</span></p>
+                                    <button class="btno" id="btn11" onclick="readMore11()">Подробнее</a> 
+                                    <button onclick="Toggle12()" id="btnh12" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/ОР.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Заветная мечта</h5>
+                                    <p>От 2 500 рублей<span id="dots12">...</span><span id="more12"><br> Состав: пуансеттия, оформление</span></p>
+                                    <button class="btno" id="btn12" onclick="readMore12()">Подробнее</a> 
+                                    <button onclick="Toggle13()" id="btnh13" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/b9FUfn75aCg.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Три желания</h5>
+                                    <p>От 800 рублей<span id="dots13">...</span><span id="more13"><br> Состав: тюльпан<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn13" onclick="readMore13()">Подробнее</a> 
+                                    <button onclick="Toggle14()" id="btnh14" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4 ">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/гипсофилы.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Нежность</h5>
+                                    <p>От 1 500 рублей<span id="dots14">...</span><span id="more14"><br> Состав: анемон, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn14" onclick="readMore14()">Подробнее</a> 
+                                    <button onclick="Toggle15()" id="btnh15" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/XXC58ePxSMw.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Летний вечер</h5>
+                                    <p>От 500 рублей<span id="dots15">...</span><span id="more15"><br> Состав: ромашка<br>За штуку 10 рублей</span></p>
+                                    <button class="btno" id="btn15" onclick="readMore15()">Подробнее</a> 
+                                    <button onclick="Toggle16()" id="btnh16" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/розочки.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Жемчужина красоты</h5>
+                                    <p>От 3 000 рублей<span id="dots16">...</span><span id="more16"><br> Состав: анемон, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn16" onclick="readMore16()">Подробнее</a> 
+                                    <button onclick="Toggle17()" id="btnh17" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/aBsgUDy6yrw.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Скромная улыбка</h5>
+                                    <p>От 1 300 рублей<span id="dots17">...</span><span id="more17"><br> Состав: гербера + зелень, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn17" onclick="readMore17()">Подробнее</a> 
+                                    <button onclick="Toggle18()" id="btnh18" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/xQgRei90CP4.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Теплая встреча</h5>
+                                    <p>От 750 рублей<span id="dots18">...</span><span id="more18"><br> Состав: гербера, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn18" onclick="readMore18()">Подробнее</a> 
+                                    <button onclick="Toggle19()" id="btnh19" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/DDdfuZyuOd0.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Поцелуй солнца</h5>
+                                    <p>От 2 000 рублей<span id="dots19">...</span><span id="more19"><br> Состав: пионовидная роза, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn19" onclick="readMore19()">Подробнее</a> 
+                                    <button onclick="Toggle20()" id="btnh20" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/mwtp9mUllxg.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Золотистый цвет</h5>
+                                    <p>От 2 200 рублей<span id="dots20">...</span><span id="more20"><br> Состав: калла, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn20" onclick="readMore20()">Подробнее</a> 
+                                    <button onclick="Toggle21()" id="btnh21" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 28rem;">
+                                <img src="sourse/img/ЭТОТ.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Бал цветов</h5>
+                                    <p>От 1 300 рублей<span id="dots21">...</span><span id="more21"><br> Состав: краспедия, оформление<br>За штуку  50 рублей</span></p>
+                                    <button class="btno" id="btn21" onclick="readMore21()">Подробнее</a> 
+                                    <button onclick="Toggle22()" id="btnh22" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 28rem;">
+                                <img src="sourse/img/новые1.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Аура</h5>
+                                    <p>От 3 300 рублей<span id="dots22">...</span><span id="more22"><br> Состав: пион + оксипеталум, оформление <br>За штуку  50 рублей</span></p>
+                                    <button class="btno" id="btn22" onclick="readMore22()">Подробнее</a> 
+                                    <button onclick="Toggle23()" id="btnh23" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 28rem;">
+                                <img src="sourse/img/новые4.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Притяжение</h5>
+                                    <p>От 2 000 рублей<span id="dots23">...</8span><span id="more23"><br> Состав: тюльпан, оформление <br>За штуку 50 рублей</span></p>
+                                    <button class="btno" id="btn23" onclick="readMore23()">Подробнее</a> 
+                                    <button onclick="Toggle24()" id="btnh24" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/букет1.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Сияние</h5>
+                                    <p>От 2 500 рублей<span id="dots24">...</span><span id="more24"><br> Состав: пион + зелень, оформление <br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn24" onclick="readMore24()">Подробнее</a> 
+                                    <button onclick="Toggle28()" id="btnh28" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/пионы.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Свидание в Париже</h5>
+                                    <p>От 1 500 рублей<span id="dots25">...</span><span id="more25"><br> Состав: пион <br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn25" onclick="readMore25()">Подробнее</a> 
+                                    <button onclick="Toggle29()" id="btnh29" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/букет2.jpg"class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Снежное танго</h5>
+                                    <p>От 900 рублей<span id="dots26">...</span><span id="more26"><br>  Состав: пион, оформление <br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn26" onclick="readMore26()">Подробнее</a> 
+                                    <button onclick="Toggle30()" id="btnh30" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/букет4.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Трогательное признание</h5>
+                                    <p>От 3 000 рублей<span id="dots27">...</span><span id="more27"><br> Состав: пион, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn27" onclick="readMore27()">Подробнее</a> 
+                                    <button onclick="Toggle31()" id="btnh31" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/тюльпан.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ласковый миг</h5>
+                                    <p>От 2 500 рублей<span id="dots28">...</span><span id="more28"><br> Состав: пион, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn28" onclick="readMore28()">Подробнее</a> 
+                                    <button onclick="Toggle32()" id="btnh32" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/букет6.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Розовый закат</h5>
+                                    <p>От 3 200 рублей<span id="dots29">...</span><span id="more29"><br> Состав: пион, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn29" onclick="readMore29()">Подробнее</a> 
+                                    <button onclick="Toggle33()" id="btnh33" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/красн.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Вихрь чувств</h5>
+                                    <p>От 3 500 рублей<span id="dots30">...</span><span id="more30"><br> Состав: пион, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn30" onclick="readMore30()">Подробнее</a> 
+                                    <button onclick="Toggle34()" id="btnh34" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/топцвет.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Розовые времена</h5>
+                                    <p>От 1 000 рублей<span id="dots31">...</span><span id="more31"><br> Состав: пион, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn31" onclick="readMore31()">Подробнее</a> 
+                                    <button onclick="Toggle35()" id="btnh35" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/букет10.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Подарок Амура</h5>
+                                    <p>От 1 500 рублей<span id="dots33">...</span><span id="more33"><br> Состав: пион, оформление<br>За штуку 60 рублей</span></p>
+                                    <button class="btno" id="btn33" onclick="readMore33()">Подробнее</a> 
+                                    <button onclick="Toggle36()" id="btnh36" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/букет11.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Леди Роуз</h5>
+                                    <p>От 3 000 рублей<span id="dots34">...</span><span id="more34"><br> Состав: кустовая роза, оформление<br>За куст 250 рублей</span></p>
+                                    <button class="btno" id="btn34" onclick="readMore34()">Подробнее</a> 
+                                    <button onclick="Toggle37()" id="btnh37" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/букет12.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Краски осени</h5>
+                                    <p>От 2 250 рублей<span id="dots35">...</span><span id="more35"><br> Состав: тюльпан, оформление<br>За штуку 50 рублей</span></p>
+                                    <button class="btno" id="btn35" onclick="readMore35()">Подробнее</a> 
+                                    <button onclick="Toggle38()" id="btnh38" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-4">
+                            <div class="card" style="width: 18rem; height: 32rem;">
+                                <img src="sourse/img/букет13.jpg" class="scale" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Прованс</h5>
+                                    <p>От 3 000 рублей<span id="dots36">...</span><span id="more36"><br> Состав: лизиантус, оформление<br>За штуку 50 рублей</span></p>
+                                    <button class="btno" id="btn36" onclick="readMore36()">Подробнее</a> 
+                                    <button onclick="Toggle39()" id="btnh39" class="btn"><i class="fas fa-heart"></i></button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12">                   
+                    <div class="row px-2">
+                        
+                        <div class="col-lg-12 saait my-3">
+                            <h5>Сколько времени вы находитесь на странице: </h5>
+                            <h3 id="timer"></h3>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Сегодня с тюльпанами нет никаких проблем. Их можно легко приобрести в любом цветочном магазине. Это же касается и луковиц тюльпана. Однако ранее, в 17-м веке, луковицы тюльпана были настолько ценными в Голландии, что ценились выше золота. В 1634-1637 годах, в Западной Европе, произошло настоящее тюльпанное безумие. Луковицы были настолько дорогими, что их считали валютой.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p> Самым медленно цветущим цветком на нашей планете является редкий вид гигантской бромелиии Puya raimondii (Пуйя Раймонда). Он был обнаружен на высоте 3960 метров над уровнем моря в боливийских горах в 1870-м году.
+
+                                Цвести Пуйя Раймонда начинает приблизительно на 80-150 году своей жизни. Как только Пуйя Раймонда расцветет, она погибнет.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>В свое время самой дорогой розой в мире считалась роза Джульетта, созданная знаменитым английским селекционером Дэвидом Остином. На создание этой удивительной розы он потратил целых 15 лет и сумму более 3 миллионов евро. Презентовал свою розу он на выставке в Англии в 2006 году.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Цветы всегда были символами. Например, лилии ассоциируются с жизнью и чистотой, особенно у буддистских монахов. Красные розы олицетворяют любовь, красоту, страсть. В Европе маки носят 8-9 мая, в Дни памяти и примирения (у нас День Победы), в честь тех, кто погиб во время Второй мировой войны. Ромашки всегда ассоциируются с детьми.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Бытует мнение, что цветы не имеют способности к осуществлению мыслительного процесса и проявлению эмоциональных реакций. Однако последние научные данные заставляют взглянуть на этот вопрос совсем с другой стороны.
+
+                                Дело в том, что ученые доказали, что все живые организмы, в том числе и цветы, обладают биополем, которое помогает им передавать друг другу эмоции и информацию.
+                                
+                                Поэтому, заводя комнатное растение, обращайте внимание не только на режим полива и температуру воздуха, но и на эмоциональный климат в комнате.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Самые первые цветочные часы появились в 20-х годах ХVIII столетия. Их изобрел выдающийся естествоиспытатель Карл Линней. Путем тщательных наблюдений, он выяснил, что цветки разных растений распускаются и закрываются всегда в определенное время, что позволяет по ним сверять часы.
+
+                                Однако у этого природного механизма есть свои недочеты -точность таких часов на прямую зависит от погоды.
+                                
+                                До нынешнего момента самыми известными цветочными часами считались японские и швейцарские. Столица России также может похвастаться наличием у себя подобной достопримечательности – диаметр часов на Поклонной горе составляет 10 метров.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Вы когда-то слышали о таком цветке как Ясенец белый? Его еще называют неопалимой купиною. Все дело в том, что этот многолетний куст может самовоспламеняться. Да, да. Его можно подпалить как самостоятельно, так и дождаться самовоспламенения (естественно, если солнечные лучи будут сильно палить).
+
+                                После того как растение загорится (горит оно синим пламенем) и потухнет, окажется, что никакого вреда огонь ему не нанес.
+                                
+                                Такой эффект возникает благодаря тому, что растение выделяет огромное количество эфирных масел. Именно эти масла вспыхивают при высокой температуре. Температура горения эфирного масла настолько низкая, что растение не страдает после так называемого «пожара».</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Сегодня на нашей планете существует огромное разнообразие цветов. Ботаники обнаружили более 270 000 их видов. Из этого числа около 35 000 — это разновидности роз. И это далеко не последняя цифра. Ежегодно ученые открывают новые виды.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Цветущее растение начинает свою жизнь как семя, которое прорастает, чтобы пустить свои корни и вырастить стебель. Затем на стебле формируются листочки и непосредственно цветок. Сам цветок — это репродуктивная часть растения, которая содержит его половые органы. Он производит семена новых растений путем опыления. Полученные семена попадают в грунт, прорастают и цикл повторяется.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Вы когда-либо слышали о радужных розах? Это удивительные розы, которые, кажется, впитали все цвета радуги. Естественно, это не настоящая, а искусственно созданная роза. Кстати, сделать такую розу можете и вы в домашних условиях. Достаточно приобрести белую розу, разделить ее стебель на несколько частей (разные потоки) и поместить каждую часть стебля в воду с красителем. Она будет поглощать воду, которая затем испарится, а краситель останется на лепестках.
+
+                                Придумал метод такой окраски Питер Ван де Веркен.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Цветы всегда были символами. Например, лилии ассоциируются с жизнью и чистотой, особенно у буддистских монахов. Красные розы олицетворяют любовь, красоту, страсть. В Европе маки носят 8-9 мая, в Дни памяти и примирения (у нас День Победы), в честь тех, кто погиб во время Второй мировой войны. Ромашки всегда ассоциируются с детьми.
+
+                            </p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Одуванчик считается сорняком, однако это очень полезный цветок. В его составе находится огромное количество витаминов группы А, В, С и D. В нем также есть железо, цинк и калий. Из одуванчика можно готовить варенье (напоминает мед), из его листьев можно готовить зеленый борщ. Также, из этого цветка готовят вино.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Многие цветковые растения раскрывают свои венчики по определенному расписанию. Предрассветные пташки — цветы цикория и козлобородника. В пять утра пробуждается шиповник, часом позже — колокольчики и одуванчики, в восемь утра — бархатцы и вьюнки.
+
+                                Засыпают цветы тоже в определенной последовательности. Поникли колокольчики — значит, на дворе около двух пополудни. Маки и одуванчики закрываются в 14:00−15:00, цикорий — ближе к 16:00. Дольше всех бодрствует шиповник — его венчики сворачиваются в 19−20 часов.
+                                
+                                Еще в XVIII веке в Швеции придумали цветочные часы. Циферблат для них вскапывали прямо на земле. Вместо обычных делений его делили на сектора, в каждом из которых высаживали цветы определенного вида. Такие часы позволяли определять время довольно точно, но в пасмурную погоду — увы! — не работали.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Эффектный и ароматный пион носит имя целителя из античных мифов, лечившего олимпийских богов. Такое совпадение — неспроста. Препараты на основе бутонов пиона останавливают кровотечения, ускоряют заживление ран, помогают при бессоннице и неврастении.
+
+                                Пион не только лечит, но и сам отличается отменной продолжительностью жизни. При хорошем уходе его куст способен цвести почти сотню лет.
+                                
+                                Пионы символизируют радость и процветание, поэтому их часто используют для составления свадебных букетов. А еще композиции из пионов вручают супругам на никелевую свадьбу (двенадцатая годовщина со дня бракосочетания).</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Первые орхидеи появились еще 145 миллионов лет назад. С тех пор эти цветы распространились по всей планете — они живут на болотах и в пустынях, в тундрах и на бесплодных отвесных скалах. Некоторые виды орхидей растут на деревьях, но не паразитируют на них, а используют стволы в качестве опор, чтобы тянуться к солнечному свету.
+
+                                Самые дорогостоящие орхидеи — жительницы Малайзии. «Золото Кинабалу», как называют этот редкий вид, впервые расцветает только в 15 лет. Один побег уникального цветка продается за 5 тысяч долларов.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Во многих странах цветы находят применение... в кулинарии. Листьями календулы во Франции и в Англии заправляют супы, а бутоны люцерны добавляют в закусочные салаты. В Мексике употребляют в пищу клубни георгина. Китайцы считают вполне съедобными луковицы некоторых лилий, а из корневищ лотоса делают муку, варят суп. Из фиалок во Франции готовят ароматное желе, а лепестки хризантем в Японии используют для приготовления изысканных лакомств. Молодые листья одуванчиков идут в салаты, его вареные корни употребляют вместо шпината, а в жареном виде они могут заменить кофе.</p>
+                        </div>
+                        <div class="col-lg-12 saait my-4">
+                            <p>Разные окраски лепестков лучше других различает пчела. Она особенно хорошо видит желтые, синие и фиолетовые расцветки. Не замечают ни пчела, ни шмель красного цвета. Красный мак для пчелы, видимо, выглядит ярко-фиолетовым.</p>
+                        </div>                                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="mt-4">
+        <div class="conteinerfluid">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 footertext text-center">
+                    <p> Номера телефонов: <br>+7 (992) 234-10-31 <br> +7 (921) 200-21-98</p>
+                </div>
+                <div class="col-lg-4 col-md-12 footertext text-center">
+                    <p> Наш адрес:<br> г.Пермь, ул.Светлая, 23</p>
+                        <script>;
+   // Добавить в Избранное
+   function bookmark2(a) {
+   title=document.title;
+   url=document.location;
+   try {
+   // Internet Explorer
+   window.external.AddFavorite(url, title);
+   }
+   catch (e) {
+   try {
+   // Mozilla
+   window.sidebar.addPanel(title, url, "");
+   }
+   catch (e) {
+   // Opera
+   if (typeof(opera)=="object") {
+   a.rel="sidebar";
+   a.title=title;
+   a.url=url;
+   return true;
+   }
+   else {
+   alert('Ваш браузер не поддерживает автоматическое добавление закладок. Нажмите Ctrl+D чтобы добавить страницу в закладки.');
+   }
+   }
+   }
+   return false;
+   }
+   </script>
+   
+   <p href="javascript:void(0)" onclick="return bookmark2(this)">Добавить страницу в закладки!</p>
+                   
+                
+                </div>
+                <div class="col-lg-4 col-md-12 footertext text-center">
+                    <p> Расписание: <br> Пн-Пт 11:00-21:30 <br>Субб-Вс 14:00-16:00 </p>
+                </div>
+            </div>           
+        </div>
+    </footer>
+    <div class="go-top">
+        <img style="width: 50px; margin-inline: 2 em; margin: 5px;" src="sourse/files/toptop.png" alt="">
+    </div>
+    <script src="more.js"></script>
+    <script src="main.js"></script>
+    <script src="heart.js"></script>
+    <script src="timer.js"></script>
+   <script src="button.js"></script>
+   <script src="slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
